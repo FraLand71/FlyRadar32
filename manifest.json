@@ -1,0 +1,16 @@
+{
+  "name": "FlyRadar32",
+  "version": "5.9.2",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "FlyRadar_Waveshare7_v5.9.2.ino.merged.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
