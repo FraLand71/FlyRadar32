@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FlyRadar32 | Web Installer</title>
-<meta name="description" content="Install FlyRadar32 5.9.2 on Waveshare ESP32-S3 Touch LCD 7 using Chrome.">
+<title>FlyRadar32 1.0 (Build 594) | Web Installer</title>
+<meta name="description" content="FlyRadar32 1.0 Build 594 installer for Waveshare ESP32-S3 Touch LCD 7, UART1 with Chrome.">
 <style>
 :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color-scheme:dark}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 10%,#12334c 0%,#080e18 64%);color:#edf6ff;min-height:100vh;display:grid;place-items:center;padding:24px}
-main{width:min(100%,650px);padding:32px;border:1px solid #2c495b;border-radius:20px;background:#0a1726e8;box-shadow:0 20px 60px #0009}
+main{width:min(100%,680px);padding:32px;border:1px solid #2c495b;border-radius:20px;background:#0a1726e8;box-shadow:0 20px 60px #0009}
 h1{font-size:clamp(32px,7vw,48px);letter-spacing:.04em;margin:0}h1 span{color:#eabf42}p{line-height:1.6;color:#b8cad8}small{color:#89a6b9}
 .ver{display:inline-block;border:1px solid #2a5366;border-radius:99px;padding:6px 12px;color:#91d9f1;font-size:13px;margin:18px 0}
 section{background:#0e2436;border-radius:14px;padding:20px;margin:20px 0}
-section strong{color:white}ol{line-height:2;padding-left:23px;color:#c9d9e3}
+section strong{color:white}ol{line-height:1.85;padding-left:23px;color:#c9d9e3}
 a{color:#7ed8ff}.install{padding:20px 0;--esp-tools-button-color:#eabb43;--esp-tools-button-text-color:#101824;--esp-tools-button-border-radius:12px}
 footer{font-size:12px;color:#8ba4b5;margin-top:24px}
 </style>
@@ -17,14 +17,18 @@ footer{font-size:12px;color:#8ba4b5;margin-top:24px}
 </head><body><main>
 <h1>FLY<span>RADAR32</span></h1>
 <p>Flight radar for Waveshare ESP32-S3 Touch LCD 7″ (800 × 480).</p>
-<div class="ver">Stable firmware · v5.9.2</div>
-<section><strong>Install from Chrome or Edge</strong>
-<ol><li>Connect your Waveshare using its USB-to-UART port, as for Big Plane Radar.</li><li>Close Arduino Serial Monitor and other applications using the USB port.</li><li>Click the button below and select the connected serial port.</li><li>Follow the installation instructions; restart the Waveshare afterward.</li></ol>
+<div class="ver">Public version 1.0 · Build 594</div>
+<section><strong>Install via UART1 — Chrome / Edge</strong>
+<ol><li>Connect the Waveshare UART1 USB-to-serial port using a data cable.</li><li>Close Arduino Serial Monitor or any other software using the serial port.</li><li>In desktop Chrome or Edge, click Install and choose the Waveshare serial port.</li><li>Follow the prompts, then restart the display.</li></ol>
 <div class="install"><esp-web-install-button manifest="./manifest.json">
-<span slot="unsupported">Open this page in desktop Chrome or Edge with Web Serial support.</span>
+<span slot="unsupported">This installer requires desktop Chrome or Edge with Web Serial support.</span>
 </esp-web-install-button></div>
-<small>Installing firmware replaces the current firmware and may erase saved Wi-Fi/location settings. Keep a backup.</small>
+<small>Flashing replaces the current firmware and can erase saved Wi-Fi/location preferences. Keep a backup.</small>
 </section>
-<p>The airline photo collection stays on your microSD card and is not included in this firmware.</p>
-<footer><a href="https://github.com/FraLand71/FlyRadar32">Source repository</a> · Only for the ESP32-S3 Waveshare 7″ hardware.</footer>
+<section><strong>Aircraft photo library — microSD</strong>
+<p>The optional aircraft images are stored on the microSD, not in the firmware. Format the card as FAT32 with an MBR partition table, extract the image archive, and copy the <code>foto_compagnie_aeree</code> folder to the card root.</p>
+<p><a href="https://github.com/FraLand71/FlyRadar32/blob/main/sdcard/README.md">MicroSD setup instructions</a> · <a href="https://github.com/FraLand71/FlyRadar32/releases">Photo library / Releases</a></p>
+<small>The image archive is not available to the public until its Release is published and redistributable image rights are verified.</small>
+</section>
+<footer><a href="https://github.com/FraLand71/FlyRadar32">GitHub repository</a> · <a href="https://github.com/FraLand71/FlyRadar32/blob/main/INSTALL.md">Installation guide</a> · ESP32-S3 Waveshare 7″ only</footer>
 </main></body></html>
