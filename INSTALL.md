@@ -1,12 +1,22 @@
-# FlyRadar32 web installer
+# FlyRadar32 1.0 (Build 594) — Web Installer
 
-Open https://fraland71.github.io/FlyRadar32/ in desktop Chrome/Edge.
+Install using desktop Google Chrome or Microsoft Edge: https://fraland71.github.io/FlyRadar32/
 
-## Firmware upload (required)
-Upload the exact file `FlyRadar_Waveshare7_v5.9.2.ino.merged.bin` (8,388,608 bytes) to the **root of the main branch**, alongside `index.html` and `manifest.json`. No rename.
+## UART1 installation
 
-## GitHub Pages
-Repository Settings → Pages → Build and deployment: Deploy from a branch → Branch `main`, Folder `/(root)` → Save. Wait for deployment.
+1. Attach a data-capable USB cable to the Waveshare ESP32-S3 Touch LCD 7's **UART1 / USB-to-UART** port.
+2. Close Arduino Serial Monitor and other apps occupying the serial port.
+3. Open the installer in Chrome/Edge. Click **Install** and select the Waveshare UART serial port.
+4. Complete flashing and restart the board. Flashing can erase saved Wi-Fi/location preferences.
 
-## Notes
-This is a merged binary for ESP32-S3 to flash at offset 0. The microSD pictures are separate. Installation may erase Wi-Fi or location settings. Back up working firmware before flashing.
+Firmware file: `FlyRadar32_v1_0_Build594.ino.merged.bin` (8,388,608 bytes), ESP32-S3 merged image at offset 0.
+
+Previous firmware `FlyRadar_Waveshare7_v5.9.2.ino.merged.bin` is preserved in this repository as a backup.
+
+## Photo library microSD (optional)
+
+Read [microSD instructions](sdcard/README.md). The photos are distributed as a separate Release asset **only after publication and license verification**. Prepare a FAT32/MBR card with the extracted `/foto_compagnie_aeree/` folder.
+
+## Publishing
+
+The installer is hosted by GitHub Pages from `main` / `(root)`. The file `manifest.json` selects the published merged firmware; don't rename the file without updating the manifest.
