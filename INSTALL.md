@@ -1,4 +1,4 @@
-# FlyRadar32 1.0 (Build 594) — Web Installer
+# FlyRadar32 1.1 (Build 595) — Web Installer
 
 Install using desktop Google Chrome or Microsoft Edge: https://fraland71.github.io/FlyRadar32/
 
@@ -9,9 +9,9 @@ Install using desktop Google Chrome or Microsoft Edge: https://fraland71.github.
 3. Open the installer in Chrome/Edge. Click **Install** and select the Waveshare UART serial port.
 4. Complete flashing and restart the board. Flashing can erase saved Wi-Fi/location preferences.
 
-Firmware file: `FlyRadar32_v1_0_Build594.ino.merged.bin` (8,388,608 bytes), ESP32-S3 merged image at offset 0.
+Firmware file: `FlyRadar32_v1_1_Build595.ino.merged.bin` (16,777,216 bytes), ESP32-S3 merged image at offset 0.
 
-Previous firmware `FlyRadar_Waveshare7_v5.9.2.ino.merged.bin` is preserved in this repository as a backup.
+Previous firmware images `FlyRadar32_v1_0_Build594.ino.merged.bin` and `FlyRadar_Waveshare7_v5.9.2.ino.merged.bin` are preserved in this repository as backups.
 
 ## Photo library microSD (optional)
 
