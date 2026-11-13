@@ -1,6 +1,6 @@
 # FlyRadar32
 
-**Version 1.1 (Build 595)** · Waveshare ESP32-S3 Touch LCD 7″ (800 × 480)
+**Version 1.1 (Build 595) — 14 MHz RGB display revision** · Waveshare ESP32-S3 Touch LCD 7″ (800 × 480)
 
 [Install FlyRadar32 using Chrome/Edge](https://fraland71.github.io/FlyRadar32/)
 
