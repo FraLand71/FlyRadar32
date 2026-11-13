@@ -20,3 +20,7 @@ Read [microSD instructions](sdcard/README.md). The photos are distributed as a s
 ## Publishing
 
 The installer is hosted by GitHub Pages from `main` / `(root)`. The file `manifest.json` selects the published merged firmware; don't rename the file without updating the manifest.
+
+## Display timing revision
+
+The Build 595 firmware currently uploaded to GitHub was replaced with the updated binary using a **14 MHz RGB pixel clock** and a version label in the splash screen. The filename remains unchanged; the installer uses revisioned URLs to avoid reusing cached firmware.
