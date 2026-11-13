@@ -1,13 +1,13 @@
 {
   "name": "FlyRadar32",
-  "version": "1.1 (Build 595)",
+  "version": "1.1 (Build 595 - 14 MHz)",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "FlyRadar32_v1_1_Build595.ino.merged.bin",
+          "path": "FlyRadar32_v1_1_Build595.ino.merged.bin?rev=a6db7f7",
           "offset": 0
         }
       ]
