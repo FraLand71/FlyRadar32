@@ -1,13 +1,13 @@
 {
   "name": "FlyRadar32",
-  "version": "1.2 (Build 690 - ESP-IDF RGB64)",
+  "version": "1.2 (Build 694 - ESP-IDF RGB64)",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "FlyRadar32_v1_2_Build690_merged.bin?rev=65b1da3a6775",
+          "path": "FlyRadar32_v1_2_Build694_merged.bin?rev=6732067f3cb1",
           "offset": 0
         }
       ]
