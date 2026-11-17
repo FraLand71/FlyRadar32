@@ -1,26 +1,30 @@
-# FlyRadar32 1.1 (Build 595) — Web Installer
+# FlyRadar32 1.2 (Build 694) — Web Installer
 
-Install using desktop Google Chrome or Microsoft Edge: https://fraland71.github.io/FlyRadar32/
+**Install:** https://fraland71.github.io/FlyRadar32/
 
-## UART1 installation
+Device: **Waveshare ESP32-S3 Touch LCD 7″ (800 × 480)**. Use **desktop Google Chrome or Microsoft Edge** (Web Serial).
 
-1. Attach a data-capable USB cable to the Waveshare ESP32-S3 Touch LCD 7's **UART1 / USB-to-UART** port.
-2. Close Arduino Serial Monitor and other apps occupying the serial port.
-3. Open the installer in Chrome/Edge. Click **Install** and select the Waveshare UART serial port.
-4. Complete flashing and restart the board. Flashing can erase saved Wi-Fi/location preferences.
+## USB installation
 
-Firmware file: `FlyRadar32_v1_1_Build595.ino.merged.bin` (16,777,216 bytes), ESP32-S3 merged image at offset 0.
+1. Connect the board with a USB data cable. For the native ESP32-S3 USB port, disconnect power, hold **BOOT**, reconnect USB, and release **BOOT**. Alternatively, use the Waveshare **UART1 USB-to-serial** port.
+2. Close Arduino Serial Monitor, ESP-IDF monitor, and other applications using the serial port.
+3. Open the web installer, click **Install**, and select the detected Waveshare serial port.
+4. Complete flashing, then disconnect and reconnect power **without** holding BOOT. Flashing may erase saved Wi-Fi/location preferences.
 
-Previous firmware images `FlyRadar32_v1_0_Build594.ino.merged.bin` and `FlyRadar_Waveshare7_v5.9.2.ino.merged.bin` are preserved in this repository as backups.
+## Firmware
 
-## Photo library microSD (optional)
+- **Current:** `FlyRadar32_v1_2_Build694_merged.bin`
+- **Size:** 2,318,944 bytes
+- **Target:** ESP32-S3
+- **Flash offset:** `0x0`
+- **Display configuration:** ESP-IDF RGB64 (Waveshare 7″)
 
-Read [microSD instructions](sdcard/README.md). The photos are distributed as a separate Release asset **only after publication and license verification**. Prepare a FAT32/MBR card with the extracted `/foto_compagnie_aeree/` folder.
+Build 690 remains in the repository as a fallback. Do not select another .bin when installing Build 694.
+
+## microSD photographs (optional)
+
+Read [microSD instructions](sdcard/README.md). The optional photo library is **not** embedded in the firmware. Prepare a FAT32/MBR card with the extracted `/foto_compagnie_aeree/` folder.
 
 ## Publishing
 
-The installer is hosted by GitHub Pages from `main` / `(root)`. The file `manifest.json` selects the published merged firmware; don't rename the file without updating the manifest.
-
-## Display timing revision
-
-The Build 595 firmware currently uploaded to GitHub was replaced with the updated binary using a **14 MHz RGB pixel clock** and a version label in the splash screen. The filename remains unchanged; the installer uses revisioned URLs to avoid reusing cached firmware.
+GitHub Pages serves the site from the `main` branch root. The `manifest.json` file points to the merged firmware at offset 0; changing the firmware filename also requires updating the manifest and cache-busting revision. Photo archive publication is separate and subject to license verification.
